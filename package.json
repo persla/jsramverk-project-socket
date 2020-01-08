@@ -1,0 +1,33 @@
+{
+  "name": "me-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "cd db && bash ./reset_test_db.bash",
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha --timeout 10000 'test/**/*.js'",
+    "clean": "rm -rf node_modules package-lock.json",
+    "start": "node app.js",
+    "production": "NODE_ENV='production' node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "hat": "0.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.4.1",
+    "morgan": "^1.9.1",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
+  }
+}

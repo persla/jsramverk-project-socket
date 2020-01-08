@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS users (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    year VARCHAR(10) NOT NULL,
+    month VARCHAR(10) NOT NULL,
+    day VARCHAR(10) NOT NULL,
+    password VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name int,
+    description VARCHAR(60),
+    texten VARCHAR(500)
+);
