@@ -5,23 +5,6 @@ var url = "mongodb://localhost:27017/";
 
 const trade = {
 
-    // getReports: function(res) {
-    //     db.all("SELECT * FROM reports",
-    //     (err, rows) => {
-    //         if (err) {
-    //             return res.status(500).json({
-    //                 errors: {
-    //                     status: 500,
-    //                     source: "/reports",
-    //                     title: "Database error",
-    //                     detail: err.message
-    //                 }
-    //             });
-    //         }
-    //
-    //         return res.json( { data: rows } );
-    //     });
-    // },
 
     getReports: function(res, req) {
         // res.send('please select a collection, e.g., /collections/messages')
@@ -39,14 +22,6 @@ const trade = {
             // res.json(result)
 
           });
-          // return res.json({
-          //
-          //     data: { type: res
-          //         // type: "falure",
-          //         // message: "Your report has been added",
-          //     }
-          // });
-
 
         });
 
@@ -82,52 +57,6 @@ const trade = {
 
 },
 
-    // getReport: function(res, reportId) {
-    //     db.get("SELECT * FROM reports" +
-    //         " WHERE reportId = ?",
-    //     reportId, (err, report) => {
-    //         if (err) {
-    //             return res.status(500).json({
-    //                 errors: {
-    //                     status: 500,
-    //                     source: "/report/" + reportId,
-    //                     title: "Database error",
-    //                     detail: err.message
-    //                 }
-    //             });
-    //         }
-    //         return res.json( { data: report } );
-    //         });
-    //     },
-
-    // addReport: function(res, body) {
-    //     db.run("INSERT INTO reports (name, description, texten) VALUES (?, ?, ?)",
-    //     body.name,
-    //     body.description,
-    //     body.texten,
-    //     function(err) {
-    //         if (err) {
-    //             return res.status(500).json({
-    //                 errors: {
-    //                     status: 500,
-    //                     source: "POST /reports",
-    //                     title: "Database error",
-    //                     detail: err.message
-    //                 }
-    //             });
-    //         }
-    //         return res.json({
-    //
-    //             data: {
-    //                 type: "success",
-    //                 message: "Your report has been added",
-    //                 week: body.name,
-    //                 description: body.description,
-    //                 texten: body.texten,
-    //             }
-    //         });
-    //     });
-    // },
 
     addRecord: function(res, body) {
 
@@ -150,32 +79,6 @@ const trade = {
                 }
             });
         });
-        // db.run("INSERT INTO reports (name, description, texten) VALUES (?, ?, ?)",
-        // body.name,
-        // body.description,
-        // body.texten,
-        // function(err) {
-        //     if (err) {
-        //         return res.status(500).json({
-        //             errors: {
-        //                 status: 500,
-        //                 source: "POST /reports",
-        //                 title: "Database error",
-        //                 detail: err.message
-        //             }
-        //         });
-        //     }
-        //     return res.json({
-        //
-        //         data: {
-        //             type: "success",
-        //             message: "Your report has been added",
-        //             week: body.name,
-        //             description: body.description,
-        //             texten: body.texten,
-        //         }
-        //     });
-        // });
 
 
     },
