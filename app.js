@@ -32,7 +32,22 @@ MongoClient.connect(url, function(err, db) {
   let dbo = db.db("market");
   dbo.createCollection("customers", function(err, res) {
     if (err) throw err;
-    console.log("Collection created!");
+    console.log("Collection customers created!");
+    db.close();
+  });
+});
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("market");
+  var myobj = { type: "All",
+  saabInStock: 20,
+  volvoInStock: 20,
+  fordInStock: 20,
+  fiatInStock: 20, };
+  dbo.collection("customers").insertOne(myobj, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
     db.close();
   });
 });

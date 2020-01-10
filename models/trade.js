@@ -28,7 +28,7 @@ const trade = {
         MongoClient.connect(url, function(err, db) {
           if (err) throw err;
           var dbo = db.db("market");
-          var query = { name: "jj@jj.co" };
+          var query = { type: "All" };
           dbo.collection("customers").find(query).sort({_id:-1}).limit(1).toArray(function(err,  documents) {
             if (err) throw err;
             console.log(documents);
